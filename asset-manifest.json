@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/metronome/static/css/main.ab7136cd.chunk.css",
+    "main.js": "/metronome/static/js/main.5db39ba3.chunk.js",
+    "main.js.map": "/metronome/static/js/main.5db39ba3.chunk.js.map",
+    "runtime-main.js": "/metronome/static/js/runtime-main.ed9d3ecf.js",
+    "runtime-main.js.map": "/metronome/static/js/runtime-main.ed9d3ecf.js.map",
+    "static/js/2.bc518b8a.chunk.js": "/metronome/static/js/2.bc518b8a.chunk.js",
+    "static/js/2.bc518b8a.chunk.js.map": "/metronome/static/js/2.bc518b8a.chunk.js.map",
+    "static/js/3.93eaabbe.chunk.js": "/metronome/static/js/3.93eaabbe.chunk.js",
+    "static/js/3.93eaabbe.chunk.js.map": "/metronome/static/js/3.93eaabbe.chunk.js.map",
+    "index.html": "/metronome/index.html",
+    "static/css/main.ab7136cd.chunk.css.map": "/metronome/static/css/main.ab7136cd.chunk.css.map",
+    "static/js/2.bc518b8a.chunk.js.LICENSE.txt": "/metronome/static/js/2.bc518b8a.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/metronome/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ed9d3ecf.js",
+    "static/js/2.bc518b8a.chunk.js",
+    "static/css/main.ab7136cd.chunk.css",
+    "static/js/main.5db39ba3.chunk.js"
+  ]
+}
