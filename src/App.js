@@ -1,6 +1,8 @@
 import React, { useEffect, useReducer } from "react";
 import useSound from "use-sound";
-import click1 from "./sounds/click1.wav";
+import soundFile from "./sounds/click.mp3";
+
+// Custom hook
 
 function useMetronome() {
   let [state, dispatch] = useReducer(
@@ -10,49 +12,71 @@ function useMetronome() {
           return { ...state, speed: state.speed + 1 };
         case "DECREMENT_SPEED":
           return { ...state, speed: state.speed - 1 };
-        case "INPUT_SPEED":
+        case "SLIDER_SPEED":
           return { ...state, speed: action.value };
         case "TOGGLE_START":
-          return { ...state, playing: !state.playing };
+          return { ...state, isPlaying: !state.isPlaying };
+        default:
+          return state;
       }
     },
     {
       speed: 60,
-      playing: false,
+      isPlaying: false,
     }
   );
   return [state, dispatch];
 }
 
+// Components
+
+const Button = ({ value, action }) => {
+  return <button onClick={action}>{value}</button>;
+};
+
+const Slider = ({ value, action }) => {
+  return (
+    <input
+      type="range"
+      step="1"
+      min="35"
+      max="280"
+      value={value}
+      onChange={action}
+    />
+  );
+};
+
+// Metronome
+
 function App() {
-  let [{ speed, playing }, dispatch] = useMetronome();
-  const [playOn] = useSound(click1);
+  const [{ speed, isPlaying }, dispatch] = useMetronome();
+  const [click] = useSound(soundFile);
 
   useEffect(() => {
-    if (playing) {
+    if (isPlaying) {
       const interval = setInterval(() => {
-        playOn();
+        click();
       }, 60000 / speed);
       return () => clearInterval(interval);
     }
-  }, [speed, playing]);
+  }, [speed, isPlaying, click]);
 
-  const add = () => {
+  const speedUp = () => {
     dispatch({ type: "INCREMENT_SPEED" });
   };
-  const substract = () => {
+  const speedDown = () => {
     dispatch({ type: "DECREMENT_SPEED" });
   };
 
-  const typeSpeed = (e) => {
-    dispatch({ type: "INPUT_SPEED", value: parseInt(e.target.value) || 60 });
+  const speedSlide = (e) => {
+    dispatch({ type: "SLIDER_SPEED", value: parseInt(e.target.value) || 60 });
   };
 
   const toggleStart = () => {
     dispatch({ type: "TOGGLE_START" });
-    // starts immediatly
-    if (!playing) {
-      playOn();
+    if (!isPlaying) {
+      click();
     }
   };
 
@@ -60,19 +84,12 @@ function App() {
     <section>
       <h1>Simple Metronome</h1>
       <div className="metronome">
-        <button onClick={substract}> - </button>
-        <input value={speed} onChange={typeSpeed} />
-        <button onClick={add}> + </button>
-        <input
-          type="range"
-          min="35"
-          max="280"
-          value={speed}
-          step="1"
-          onChange={typeSpeed}
-        />
+        <h1>{speed}</h1>
+        <Button value="-" action={speedDown} />
+        <Button value="+" action={speedUp} />
+        <Slider value={speed} action={speedSlide} />
+        <Button value={isPlaying ? "Stop" : "Start"} action={toggleStart} />
       </div>
-      <button onClick={toggleStart}> {playing ? "Stop" : "Start"}</button>
     </section>
   );
 }
