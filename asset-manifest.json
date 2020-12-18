@@ -1,26 +1,24 @@
 {
   "files": {
     "main.css": "/metronome/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/metronome/static/js/main.c8f0837e.chunk.js",
-    "main.js.map": "/metronome/static/js/main.c8f0837e.chunk.js.map",
-    "runtime-main.js": "/metronome/static/js/runtime-main.1eb89c13.js",
-    "runtime-main.js.map": "/metronome/static/js/runtime-main.1eb89c13.js.map",
+    "main.js": "/metronome/static/js/main.c530c203.chunk.js",
+    "main.js.map": "/metronome/static/js/main.c530c203.chunk.js.map",
+    "runtime-main.js": "/metronome/static/js/runtime-main.cfb29539.js",
+    "runtime-main.js.map": "/metronome/static/js/runtime-main.cfb29539.js.map",
     "static/js/2.bfa2bc38.chunk.js": "/metronome/static/js/2.bfa2bc38.chunk.js",
     "static/js/2.bfa2bc38.chunk.js.map": "/metronome/static/js/2.bfa2bc38.chunk.js.map",
     "static/js/3.7dd7b757.chunk.js": "/metronome/static/js/3.7dd7b757.chunk.js",
     "static/js/3.7dd7b757.chunk.js.map": "/metronome/static/js/3.7dd7b757.chunk.js.map",
-    "static/js/4.5e29f1d0.chunk.js": "/metronome/static/js/4.5e29f1d0.chunk.js",
-    "static/js/4.5e29f1d0.chunk.js.map": "/metronome/static/js/4.5e29f1d0.chunk.js.map",
     "index.html": "/metronome/index.html",
     "static/css/main.6dea0f05.chunk.css.map": "/metronome/static/css/main.6dea0f05.chunk.css.map",
     "static/js/2.bfa2bc38.chunk.js.LICENSE.txt": "/metronome/static/js/2.bfa2bc38.chunk.js.LICENSE.txt",
     "static/js/3.7dd7b757.chunk.js.LICENSE.txt": "/metronome/static/js/3.7dd7b757.chunk.js.LICENSE.txt",
-    "static/media/click1.07cda4b8.wav": "/metronome/static/media/click1.07cda4b8.wav"
+    "static/media/click.10e40607.mp3": "/metronome/static/media/click.10e40607.mp3"
   },
   "entrypoints": [
-    "static/js/runtime-main.1eb89c13.js",
+    "static/js/runtime-main.cfb29539.js",
     "static/js/2.bfa2bc38.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.c8f0837e.chunk.js"
+    "static/js/main.c530c203.chunk.js"
   ]
 }
