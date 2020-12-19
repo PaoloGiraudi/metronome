@@ -2,7 +2,7 @@
 
 The project is a simple metronome for speed lovers.
 
-Built while learning 'useReducer()' in React.
+Built while learning `useReducer()` in React.
 
 ## How to achieve speed
 
