@@ -1,4 +1,5 @@
 import React, { useEffect, useReducer } from "react";
+import "./App.css";
 import useSound from "use-sound";
 import soundFile from "./sounds/click.mp3";
 
@@ -31,7 +32,11 @@ function useMetronome() {
 // Components
 
 const Button = ({ value, action }) => {
-  return <button onClick={action}>{value}</button>;
+  return (
+    <button className={`button button${value}`} onClick={action}>
+      {value}
+    </button>
+  );
 };
 
 const Slider = ({ value, action }) => {
@@ -41,6 +46,7 @@ const Slider = ({ value, action }) => {
       step="1"
       min="35"
       max="280"
+      className="slider"
       value={value}
       onChange={action}
     />
@@ -49,7 +55,7 @@ const Slider = ({ value, action }) => {
 
 // Metronome
 
-function App() {
+function Metronome() {
   const [{ speed, isPlaying }, dispatch] = useMetronome();
   const [click] = useSound(soundFile);
 
@@ -79,19 +85,22 @@ function App() {
       click();
     }
   };
-
   return (
-    <section>
-      <h1>Simple Metronome</h1>
-      <div className="metronome">
-        <h1>{speed}</h1>
-        <Button value="-" action={speedDown} />
-        <Button value="+" action={speedUp} />
-        <Slider value={speed} action={speedSlide} />
-        <Button value={isPlaying ? "Stop" : "Start"} action={toggleStart} />
-      </div>
-    </section>
+    <div className="metroContainer">
+      <h3 className="speedDisplay">{speed}</h3>
+      <Button value="+" action={speedUp} />
+      <Slider value={speed} action={speedSlide} />
+      <Button value="-" action={speedDown} />
+      <Button value={isPlaying ? "Stop" : "Start"} action={toggleStart} />
+    </div>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <section>
+      <h1 className="mainTitle">METRONOME</h1>
+      <Metronome />
+    </section>
+  );
+}

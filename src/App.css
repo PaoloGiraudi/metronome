@@ -1,3 +1,92 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Cantarell:ital@1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
+
+body {
+  box-sizing: border-box;
+  font-family: "Cantarell", "Roboto", "Ubuntu", sans-serif;
+  font-style: italic;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  background: rgb(255, 166, 57);
+  background: linear-gradient(
+    to right,
+    #ffa639 0%,
+    #dd00d0 40%,
+    #ffffff 40%,
+    #ffffff 100%
+  );
+}
+
+.mainTitle {
+  text-align: center;
+  grid-column: 1/2;
+  writing-mode: vertical-lr;
+  font-size: 6rem;
+  line-height: 0.8;
+  letter-spacing: 0.01em;
+  color: #fff;
+}
+
+.metroContainer {
+  display: grid;
+  grid-template-rows: 1.5fr 1fr 2fr 1fr 1fr;
+  padding: 2.5rem 1.5rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.metroContainer h3 {
+  text-align: center;
+  width: 100%;
+  font-size: 5rem;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  width: 75px;
+  height: 75px;
+  background-color: #fff;
+  font-style: italic;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to left, #ffa639, #dd00d0);
+}
+
+.button:first-of-type {
+  align-self: flex-end;
+}
+.button:nth-of-type(2) {
+  align-items: flex-end;
+  align-self: flex-start;
+}
+
+.buttonStart,
+.buttonStop {
+  width: 150px;
+  height: 75px;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.slider {
+  appearance: slider-vertical;
+  height: 100%;
+}
+
+/* usare la classe button per tutti i button e buttonStart/buttonStop
+per cambiare lo start e stop */
