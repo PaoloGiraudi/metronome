@@ -10,11 +10,13 @@ body {
   box-sizing: border-box;
   font-family: "Cantarell", "Roboto", "Ubuntu", sans-serif;
   font-style: italic;
+  color: #1d1d1d;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 section {
+  position: relative;
   height: 100vh;
   width: 100vw;
   display: grid;
@@ -27,6 +29,17 @@ section {
     #ffffff 40%,
     #ffffff 100%
   );
+}
+
+p {
+  margin: 0.5rem 1rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+a {
+  color: #dd00d0;
 }
 
 .mainTitle {

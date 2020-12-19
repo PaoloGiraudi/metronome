@@ -86,13 +86,18 @@ function Metronome() {
     }
   };
   return (
-    <div className="metroContainer">
-      <h3 className="speedDisplay">{speed}</h3>
-      <Button value="+" action={speedUp} />
-      <Slider value={speed} action={speedSlide} />
-      <Button value="-" action={speedDown} />
-      <Button value={isPlaying ? "Stop" : "Start"} action={toggleStart} />
-    </div>
+    <>
+      <div className="metroContainer">
+        <h3 className="speedDisplay">{speed}</h3>
+        <Button value="+" action={speedUp} />
+        <Slider value={speed} action={speedSlide} />
+        <Button value="-" action={speedDown} />
+        <Button value={isPlaying ? "Stop" : "Start"} action={toggleStart} />
+      </div>
+      <p>
+        Coded by <a href="https://github.com/PaoloGiraudi">Paolo</a>
+      </p>
+    </>
   );
 }
 
