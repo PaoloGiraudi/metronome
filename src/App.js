@@ -46,7 +46,6 @@ const Slider = ({ value, action }) => {
       step="1"
       min="35"
       max="280"
-      className="slider"
       value={value}
       onChange={action}
     />
