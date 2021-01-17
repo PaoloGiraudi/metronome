@@ -94,7 +94,7 @@ function Metronome() {
         <Button value={isPlaying ? "Stop" : "Start"} action={toggleStart} />
       </div>
       <p>
-        Coded by <a href="https://github.com/PaoloGiraudi">Paolo</a>
+        Coded by <a href="https://paologiraudi.com">Paolo</a>
       </p>
     </>
   );
