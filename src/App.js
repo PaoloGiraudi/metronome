@@ -93,9 +93,12 @@ function Metronome() {
         <Button value="-" action={speedDown} />
         <Button value={isPlaying ? "Stop" : "Start"} action={toggleStart} />
       </div>
-      <p>
-        Coded by <a href="https://paologiraudi.com">Paolo</a>
-      </p>
+      <div class="info-links">
+        <p>Made by <a href="https://paologiraudi.com">Paolo</a></p>
+        <p>
+          Code on <a href="https://github.com/PaoloGiraudi/snake">GitHub</a>
+        </p>
+      </div>
     </>
   );
 }

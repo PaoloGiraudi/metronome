@@ -34,14 +34,14 @@ section {
   );
 }
 
-p {
+.info-links {
   margin: 0.5rem 1rem;
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
-a {
+.info-links a {
   color: rgb(219, 0, 205);
 }
 
@@ -58,8 +58,8 @@ a {
 
 .metroContainer {
   display: grid;
-  grid-template-rows: 1.5fr 1fr 2fr 1fr 1fr;
-  padding: 2.5rem 1.5rem;
+  grid-template-rows: 1.5fr .75fr 2fr .75fr 1fr;
+  padding: 2.75rem 1.5rem;
   justify-items: center;
   align-items: center;
 }
@@ -187,4 +187,3 @@ input[type="range"]:focus::-ms-fill-lower {
 input[type="range"]:focus::-ms-fill-upper {
   background: linear-gradient(to left, #ffa639, #dd00d0);
 }
-
